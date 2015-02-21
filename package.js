@@ -1,5 +1,5 @@
 Package.describe({
-    summary: "Login service for stripe accounts",
+    summary: "Login service for Stripe accounts using Stripe Connect",
     name: "meteor-accounts-stripe-connect",
     version: "0.0.3",
     git: "https://github.com/chadokruse/meteor-accounts-stripe-connect.git",
@@ -10,18 +10,13 @@ Package.on_use(function(api) {
     api.imply('accounts-base', ['client', 'server']);
     api.use('accounts-oauth', ['client', 'server']);
 
-		api.use('oauth', ['client', 'server']);
+    api.use('oauth', ['client', 'server']);
     api.use('oauth2', ['client', 'server']);
     api.use('http', ['server']);
     api.use('underscore', 'server');
     api.use('templating', 'client');
     api.use('random', 'client');
     api.use('service-configuration', ['client', 'server']);
-
-  	api.add_files(
-    ['lib/stripe_configure.html', 'lib/stripe_configure.js',
-    'lib/stripe_login_button.css'],
-    'client');
 
     api.add_files("lib/accounts_stripe.js");
     api.add_files('lib/stripe_client.js', 'client');

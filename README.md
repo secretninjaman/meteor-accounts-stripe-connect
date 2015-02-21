@@ -17,7 +17,27 @@ Development
 Production
 `https://yourdomain.com/_oauth/stripe?close`
 
+#### Config
+Add your client_id to settings.json
+```
+"client_id": "ca_ABCDEFGHIJ1234567890"
+```
+
+Add the accounts config info (e.g. /server/accounts.js)
+```javascript
+Accounts.loginServiceConfiguration.insert({
+      service: 'stripe',
+      appId: Meteor.settings.stripe.client_id,
+      secret: Meteor.settings.stripe.stripe_secret_api_key,
+      scope: 'read_write', //or read_only
+      landing: 'login' //or register
+    });
+```
+
 * * *
+
+## TODOs
+
 
 ## License
 
