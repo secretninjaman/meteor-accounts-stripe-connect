@@ -1,5 +1,8 @@
 Package.describe({
-    summary: "Login service for stripe accounts"
+    summary: "Login service for stripe accounts",
+    name: "meteor-accounts-stripe-connect",
+    version: "0.0.3",
+    git: "https://github.com/chadokruse/meteor-accounts-stripe-connect.git",
 });
 
 Package.on_use(function(api) {
@@ -14,9 +17,9 @@ Package.on_use(function(api) {
     api.use('templating', 'client');
     api.use('random', 'client');
     api.use('service-configuration', ['client', 'server']);
-  	
+
   	api.add_files(
-    ['lib/stripe_configure.html', 'lib/stripe_configure.js', 
+    ['lib/stripe_configure.html', 'lib/stripe_configure.js',
     'lib/stripe_login_button.css'],
     'client');
 
