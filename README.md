@@ -5,7 +5,7 @@ meteor-accounts-stripe-connect
 
 A package for Stripe Connect, with a particular bias towards marketplaces.
 
-This is an update to @khamoud's most excellent [meteor-stripe-connect package](https://github.com/khamoud/meteor-accounts-stripe)
+This is an update to @khamoud's most excellent [meteor-stripe-connect package](https://github.com/khamoud/meteor-accounts-stripe). Unlike the original package, this package assumes you are NOT using accounts-ui.
 
 * * *
 ## Usage
@@ -30,13 +30,30 @@ Accounts.loginServiceConfiguration.insert({
       appId: Meteor.settings.stripe.client_id,
       secret: Meteor.settings.stripe.stripe_secret_api_key,
       scope: 'read_write', //or read_only
-      landing: 'login' //or register
     });
 ```
-
+Add options to your login button event handler (e.g. client/sometemplate.js)
+```javascript
+'click #sign-in-stripe-register': function(e, tmpl){
+    Meteor.loginWithStripe({
+      stripe_landing: 'register',
+      newAccountDetails: {
+        'stripe_user[business_type]': 'non_profit',
+        'stripe_user[product_category]': 'charity'
+      }
+    }, function (err) {
+        if (err){
+          console.log('ERROR: ' + err); //error handling
+        } else {
+          console.log('NO ERROR ON LOGIN'); //show an alert
+        }
+    });
+  },
+```
 * * *
 
 ## TODOs
+DRY up / improve registration options handling
 
 
 ## License
