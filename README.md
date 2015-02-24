@@ -1,14 +1,16 @@
 meteor-accounts-stripe-connect
 -----
 
-**DO NOT USE - STILL IN DEVELOPMENT**
-
 A package for Stripe Connect, with a particular bias towards marketplaces.
 
 This is an update to @khamoud's most excellent [meteor-stripe-connect package](https://github.com/khamoud/meteor-accounts-stripe). Unlike the original package, this package assumes you are NOT using accounts-ui.
 
 * * *
 ## Usage
+
+While this package is registered on the Meteor packaging system, it is purposefully hidden from Atmosphere search results. Feel free to fork and publish under your own username if you wish.
+
+'meteor add chadkruser:meteor-accounts-stripe-connect'
 
 #### Redirect URIs
 Development
@@ -36,7 +38,7 @@ Add options to your login button event handler (e.g. client/sometemplate.js)
 ```javascript
 'click #sign-in-stripe-register': function(e, tmpl){
     Meteor.loginWithStripe({
-      stripe_landing: 'register',
+      stripe_landing: 'register', // or login
       newAccountDetails: {
         'stripe_user[business_type]': 'non_profit',
         'stripe_user[product_category]': 'charity'
@@ -53,7 +55,9 @@ Add options to your login button event handler (e.g. client/sometemplate.js)
 * * *
 
 ## TODOs
-DRY up / improve registration options handling
+1. Fix known error: `Unable to parse state from OAuth query` [link](https://github.com/PauliBuccini/meteor-accounts-linkedin/issues/4)
+2. DRY up / improve registration options handling
+3. Test coverage
 
 
 ## License
