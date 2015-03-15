@@ -53,9 +53,10 @@ Add options to your login button event handler (e.g. client/sometemplate.js)
 ```
 
 ## TODOs
-1. Fix known error: `Unable to parse state from OAuth query` [link](https://github.com/PauliBuccini/meteor-accounts-linkedin/issues/4)
+~~1. Fix known error: `Unable to parse state from OAuth query` [link](https://github.com/PauliBuccini/meteor-accounts-linkedin/issues/4)~~
 2. DRY up / improve registration options handling
 3. Test coverage
+4. Fix duplicate id insertion
 
 
 ## License

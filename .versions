@@ -7,7 +7,7 @@ blaze@2.0.4
 blaze-tools@1.0.2
 boilerplate-generator@1.0.2
 callback-hook@1.0.2
-chadkruser:meteor-accounts-stripe-connect@0.0.3
+chadkruser:meteor-accounts-stripe-connect@0.0.5
 check@1.0.4
 ddp@1.0.14
 deps@1.0.6
