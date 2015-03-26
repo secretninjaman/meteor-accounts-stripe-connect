@@ -5,6 +5,8 @@ A package for Stripe Connect, with a particular bias towards marketplaces.
 
 This is an update to @khamoud's most excellent [meteor-stripe-connect package](https://github.com/khamoud/meteor-accounts-stripe). Unlike the original package, this package assumes you are NOT using accounts-ui.
 
+WARNING: This is provided as a reference only. Do NOT install this via the meteor packaging system as we'll likely be making future breaking changes. Either fork and republish your own version or install locally. 
+
 ## Usage
 
 While this package is registered on the Meteor packaging system, it is purposefully hidden from Atmosphere search results. Feel free to fork and publish under your own username if you wish.
@@ -57,6 +59,7 @@ Add options to your login button event handler (e.g. client/sometemplate.js)
 2. DRY up / improve registration options handling
 3. Test coverage
 4. Fix duplicate id insertion
+5. Integrate `oauth-encryption` package directly (currently handled outside package) [(reference)](https://meteor.hackpad.com/OAuth-encryption-spec-VoVSqikIt0D)
 
 
 ## License
