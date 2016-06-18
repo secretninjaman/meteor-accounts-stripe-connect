@@ -1,8 +1,8 @@
 Package.describe({
     summary: "Login service for Stripe accounts using Stripe Connect",
-    name: "chadkruser:meteor-accounts-stripe-connect",
+    name: "secretninjaman:meteor-accounts-stripe-connect",
     version: "0.0.7",
-    git: "https://github.com/chadokruse/meteor-accounts-stripe-connect.git",
+    git: "https://github.com/secretninjaman/meteor-accounts-stripe-connect.git",
 });
 
 Package.onUse( function (api) {
