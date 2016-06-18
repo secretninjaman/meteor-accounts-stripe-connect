@@ -22,4 +22,6 @@ Package.onUse( function (api) {
     api.addFiles("lib/accounts_stripe.js");
     api.addFiles('lib/stripe_client.js', 'client');
     api.addFiles('lib/stripe_server.js', 'server');
+
+    api.export('StripeOauth');
 });
